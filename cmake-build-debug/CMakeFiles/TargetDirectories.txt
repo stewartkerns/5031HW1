@@ -1,0 +1,3 @@
+C:/Users/Stewart/Desktop/CPSC5031/HW1/cmake-build-debug/CMakeFiles/HW1.dir
+C:/Users/Stewart/Desktop/CPSC5031/HW1/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Stewart/Desktop/CPSC5031/HW1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
