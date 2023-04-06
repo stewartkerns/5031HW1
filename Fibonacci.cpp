@@ -3,39 +3,45 @@
 //
 
 #include "Fibonacci.h"
-#include <math.h>
-#include <string>
-#include <sstream>
 
 
 Fibonacci::Fibonacci(){
-fibCount = 0;
+    //set the count to 0
+    fibCount = 0;
 
 }
 Fibonacci::~Fibonacci(){
-//no memory to delete
+    //no memory to delete
 
 }
 Fibonacci::Fibonacci(Fibonacci & fib1){
+
+    //use the operator = for the copy constructor
     fib1 = *this;
 
 }
 Fibonacci Fibonacci::operator=(Fibonacci & fib1){
- if (&fib1 != this){
-     fib1.fibCount = this->fibCount;
- }
+
+    //if they aren't in the same memory, copy the fields
+    if (&fib1 != this){
+        fib1.fibCount = this->fibCount;
+    }
 
  return *this;
 }
 
 int Fibonacci::getCount() {
+
+    //return the count of times a method was iterated
     return fibCount;
 }
 
 int Fibonacci::recursiveClassic(int fibNumber){
+
+    //reset the count, run the recursive helper and return the result
     fibCount = 0;
     return recursiveClassicHelper(fibNumber);
-//    return fibCount;
+
 }
 
 int Fibonacci::recursiveClassicHelper(int fibNumber) {
@@ -54,8 +60,13 @@ int Fibonacci::recursiveClassicHelper(int fibNumber) {
                 recursiveClassicHelper(fibNumber - 2));
     }
 }
+
 int Fibonacci::iterative(int fibNumber){
+
+    //reset the count
     fibCount = 0;
+
+    //use an iterative approach to find the fib number
     if (fibNumber == 0 || fibNumber == 1){
         return fibNumber;
     }
@@ -73,15 +84,17 @@ int Fibonacci::iterative(int fibNumber){
 }
 
 int Fibonacci::recursiveAccumulator(int fibNumber) {
+
+    //reset the count and use the recursive accumulator method to find the
+    // fib number before returning it
     fibCount = 0;
-
     return recursiveAccumulatorHelper(fibNumber, 0, 1);
-
-//    return fibCount;
 }
-int Fibonacci::recursiveAccumulatorHelper(int fibNumber, int a = 0, int b =
-        1){
 
+int Fibonacci::recursiveAccumulatorHelper(
+        int fibNumber, int a = 0, int b = 1){
+
+    //recursively find the fib number
     if (fibNumber == 0){
         return a;
     }
@@ -91,13 +104,5 @@ int Fibonacci::recursiveAccumulatorHelper(int fibNumber, int a = 0, int b =
     }
 
 }
-//int Fibonacci::constantTime(int fibNumber){
-//    double a = (1 + sqrt(5))/2.0;
-//    double b = (1 - sqrt(5))/2.0;
-//
-//    fibCount = 1;
-//    return (int)(((pow(a, (double)fibNumber) - pow(b, (double)fibNumber)))/ sqrt
-//    (5));
-//}
 
 #include "Fibonacci.h"
