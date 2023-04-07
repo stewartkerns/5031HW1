@@ -1,3 +1,11 @@
+// Stewart Kerns
+// File: main.cpp
+// Date: 04/06/2023
+//Version: 1.0
+// Last Update: 04/06/2023
+// Purpose: This program tests out the methods of the Fibonacci class and
+// prints statements with the s
+
 #include <iostream>
 #include "Fibonacci.h"
 using std::cout;
@@ -28,7 +36,7 @@ void recursiveAccumulatorStats(int, Fibonacci *);
 //PROCESS: use a iterative method to find the number
 //POST-CONDITION: return a printed statement
 void iterativeStats(int, Fibonacci *);
-//void constantTimeStats(int, Fibonacci *);
+
 
 int main() {
 

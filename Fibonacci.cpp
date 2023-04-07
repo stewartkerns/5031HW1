@@ -1,6 +1,11 @@
-//
-// Created by Stewart on 4/3/2023.
-//
+// Stewart Kerns
+// File: Fibonacci.cpp
+// Date: 04/06/2023
+//Version: 1.0
+// Last Update: 04/06/2023
+// Purpose: This class holds the methods in order to test different ways to
+// obtain Fibonacci numbers including classic recursive, accumulator
+// recursive, and iterative
 
 #include "Fibonacci.h"
 
@@ -45,7 +50,6 @@ int Fibonacci::recursiveClassic(int fibNumber){
 }
 
 int Fibonacci::recursiveClassicHelper(int fibNumber) {
-    fibCount++;
 //    if (fibNumber < 0){
 //        return -1;
 //    }
@@ -56,6 +60,7 @@ int Fibonacci::recursiveClassicHelper(int fibNumber) {
         return 1;
     }
     else{
+        fibCount++;
         return (recursiveClassicHelper(fibNumber - 1) +
                 recursiveClassicHelper(fibNumber - 2));
     }

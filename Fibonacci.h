@@ -1,6 +1,11 @@
-//
-// Created by Stewart on 4/3/2023.
-//
+// Stewart Kerns
+// File: Fibonacci.h
+// Date: 04/06/2023
+//Version: 1.0
+// Last Update: 04/06/2023
+// Purpose: This class holds the methods in order to test different ways to
+// obtain Fibonacci numbers including classic recursive, accumulator
+// recursive, and iterative
 
 #ifndef HW1_FIBONACCI_H
 #define HW1_FIBONACCI_H
